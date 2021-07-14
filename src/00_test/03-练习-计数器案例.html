@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <script type="text/babel">
+    class App extends React.Component{
+      constructor(){
+        super();
+        this.state = {
+          currentIndex:0
+        }
+      }
+
+      render(){
+        return (
+          <div>
+            <h2>{this.state.currentIndex}</h2>
+            <button onClick={this.add.bind(this)}>+</button>  
+            <button onClick={this.sub.bind(this)}>-</button>
+          </div>
+        )
+      }
+      //响应式 必须用setState
+      add(){
+        this.setState({
+          currentIndex:this.state.currentIndex+1
+        })
+
+      }
+      sub(){
+        this.setState({
+          currentIndex:this.state.currentIndex-1
+        })
+      }
+    }
+
+
+
+
+    ReactDOM.render(<App/>,document.getElementById("app"));
+  </script>
+</body>
+
+</html>
