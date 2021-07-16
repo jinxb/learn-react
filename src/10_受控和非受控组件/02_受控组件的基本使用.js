@@ -29,6 +29,8 @@ export default class App extends PureComponent {
     
   }
   handleChange(event){
-    console.log(event.target.value);
+    this.setState({
+      username:event.target.value
+    })
   }
 }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <script type="text/babel">
+    class App extends React.Component{
+      constructor(){
+        super();
+        this.state = {
+          isLogin:true,
+          movies:["拯救大兵瑞恩","夏洛特烦恼","九品芝麻官","国产凌凌漆"]
+        }
+      }
+
+      render(){
+        const {movies,isLogin} = this.state;
+        return (
+          <div>
+            <ul>
+              {movies.map((item,index)=>{
+                return <li onClick={e=>{this.testClick(index,e)}}>{item}</li>
+              })}
+            </ul>
+            
+            {isLogin? <h2>欢迎</h2>:<h2>爬</h2>}
+          </div>
+        )
+      }
+
+      testClick(index,e){
+        console.log(index);
+        console.log(e);
+      }
+    
+    }
+
+
+
+
+    ReactDOM.render(<App/>,document.getElementById("app"));
+  </script>
+</body>
+
+</html>
