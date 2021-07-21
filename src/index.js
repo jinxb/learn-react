@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './12_组件内容的补充/02_portals的使用';
+import App from './13_React中css的使用/02_普通的css/app';
 
 // import './04_组件通信的案例/style.css'
 // import './05_React实现slot/style.css'
-import './css/index.css'
+// import './css/index.css'
 
 
 
