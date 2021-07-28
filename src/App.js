@@ -5,7 +5,7 @@ export default class App extends PureComponent {
     return (
       <div>
         {
-          <h2>我是标题 </h2>
+          <h2>我是标题</h2>
         }
       </div>
     )
