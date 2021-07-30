@@ -14,6 +14,6 @@ import App from './App';
 
 
 ReactDOM.render(
-    <App name="jinxb" />,
+    <App  />,
   document.getElementById('root')
 );
