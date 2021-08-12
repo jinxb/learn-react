@@ -13,7 +13,7 @@ export default class CSSTransitionDemo extends PureComponent {
     super(props);
 
     this.state = {
-      isShow: false
+      isShow: true
     }
   }
   render() {
@@ -23,7 +23,9 @@ export default class CSSTransitionDemo extends PureComponent {
         <button onClick={e => {this.setState({isShow: !isShow})}}>显示/隐藏</button>
         <CSSTransition in={isShow}
                        classNames="card"
-                       timeout={300}>
+                       timeout={300}
+                       unmountOnExit={true}
+                       appear>
           <Card
             style={{ width: 300 }}
             cover={
